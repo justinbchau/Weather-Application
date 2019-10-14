@@ -17,18 +17,18 @@ window.addEventListener('load', () => {
           long = position.coords.longitude;
           lat = position.coords.latitude;
 
-          const api2 = `http://api.geonames.org/timezoneJSON?formatted=true&lat=${lat}&lng=${long}&username=ayoisaiah`;
+          // const api2 = `http://api.geonames.org/timezoneJSON?formatted=true&lat=${lat}&lng=${long}&username=ayoisaiah`;
     
-          fetch(api2)
-          .then(response => {
-            return response.json();
-          })
-          .then(data => {
-            console.log(data);
-            let time = data.time;
+          // fetch(api2)
+          // .then(response => {
+          //   return response.json();
+          // })
+          // .then(data => {
+          //   console.log(data);
+          //   let time = data.time;
             
-            currentTime.textContent = time;
-          })
+          //   currentTime.textContent = time;
+          // })
 
           const api = `${proxy}https://api.darksky.net/forecast/${key}/${lat},${long}` + `?format=jsonp`;
 
