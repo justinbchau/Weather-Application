@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
             let sum = data.currently.summary;
             let icon = data.currently.icon;
             //Setting DOM elements to the Data
-            currentTime.textContent = time;
+            currentTime.textContent = time.replace(/_/g, " ");
             currentWeather.textContent = weather;
             weatherDes.textContent = sum;
             

@@ -56,7 +56,17 @@ body {
 }
 
 .btn {
-    border-radius: 4px;
-    padding: 2px;
-    margin: 5px;
-}
+    background-color: black; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 10px 30px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
