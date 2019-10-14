@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box; 
+    background-image: linear-gradient(to right bottom, #e66465, #9198e5);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 68.7em) {
+    html {
+        font-size: 50%;
+    }
+    }
+body {
+    min-height: calc(100vh - 2 * 4vw);
+}
+
+.header {
+    margin-top: 5rem;
+    font-size: 40px;
+}
+
+.center {
+    text-align: center;
+}
+
+.current__weather {
+    margin-top: 3rem;
+}
+
+.change__city {
+    margin-top: 11rem;
+}
+
+.current__time {
+    padding: 2rem;
+}
+
+.search__field {
+    padding: 10px;
+}
+
+.weather__description {
+    padding: 3rem;
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 2px;
+    margin: 5px;
+}

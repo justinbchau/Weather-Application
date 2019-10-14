@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Displays the current City and Local Time depending on location -->
+    <header class="header">
+        <section>
+            <div class="container center">
+                <h1 class="current__city">
+                    City: San Jose
+                </h1>
+                <h2 class="current__time">TimeZone</h2>
+            </div>
+        </section>
+    </header>
+
+    <!-- Displays the current weather after pulling a location -->
+    <section>
+        <div class="container center temperature">
+            <canvas class="icon" width="128" height="128"></canvas>
+            <h2 class="current__weather">Current Weather</h2> 
+            <h2 class="degree">F</h2>
+            <button class="btn">Convert</button>
+            <h2 class="weather__description"> Summary</h2>
+        </div>
+    </section>
+
+    <!-- <section class="change__city">
+        <div class="container center">
+            <h1>Search for a city</h1>
+            <form class="search__field">
+                <input type="text" placeholder="Enter City Name">
+                <button>
+                    Search
+                </button>
+            </form>
+        </div>
+    </section> -->
+
+    <script src="skycons.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
