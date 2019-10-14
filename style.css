@@ -29,6 +29,7 @@ body {
 .header {
     margin-top: 5rem;
     font-size: 40px;
+    padding: 5px;
 }
 
 .center {

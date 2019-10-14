@@ -1,19 +1,34 @@
 window.addEventListener('load', () => {
     let long;
     let lat;
+    const proxy = `https://cors-anywhere.herokuapp.com/`;
+    const key = `bc4956f82ef6ad27ebd991dfeb700c03`;
 
-    let currentTime = document.querySelector('.current__time');
+    let currentTimeZone = document.querySelector('.current__timezone');
     let currentWeather = document.querySelector('.current__weather');
     let weatherDes = document.querySelector('.weather__description');
     const btn = document.querySelector('.btn');
+    let currentTime = document.querySelector('.current__time');
+
+  
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
           long = position.coords.longitude;
           lat = position.coords.latitude;
 
-          const proxy = `https://cors-anywhere.herokuapp.com/`;
-          const key = `bc4956f82ef6ad27ebd991dfeb700c03`;
+          const api2 = `http://api.geonames.org/timezoneJSON?formatted=true&lat=${lat}&lng=${long}&username=ayoisaiah`;
+    
+          fetch(api2)
+          .then(response => {
+            return response.json();
+          })
+          .then(data => {
+            console.log(data);
+            let time = data.time;
+            
+            currentTime.textContent = time;
+          })
 
           const api = `${proxy}https://api.darksky.net/forecast/${key}/${lat},${long}` + `?format=jsonp`;
 
@@ -25,12 +40,12 @@ window.addEventListener('load', () => {
           .then(data => {
             //Pulling data to manipulate from the API
             console.log(data);
-            let time = data.timezone;
+            let timeZone = data.timezone;
             let weather = data.currently.temperature;
             let sum = data.currently.summary;
             let icon = data.currently.icon;
             //Setting DOM elements to the Data
-            currentTime.textContent = time.replace(/_/g, " ");
+            currentTimeZone.textContent = timeZone.replace(/_/g, " ");
             currentWeather.textContent = weather;
             weatherDes.textContent = sum;
             
