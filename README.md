@@ -1,6 +1,6 @@
 # Weather App
  
-[Check out the App here](https://mrchaufun.github.io/Weather-Application/)
+## [Check out the App here](https://mrchaufun.github.io/Weather-Application/)
 
 Allow the application to view your location, otherwise it will throw an error. 
 
