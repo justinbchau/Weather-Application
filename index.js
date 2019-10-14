@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
     let weatherDes = document.querySelector('.weather__description');
     const btn = document.querySelector('.btn');
     let currentTime = document.querySelector('.current__time');
+    let comingForecast = document.querySelector('.coming__forecast');
 
   
 
@@ -64,11 +65,17 @@ window.addEventListener('load', () => {
               }
             });
             setIcons(icon, document.querySelector('.icon'));
-          })
-        
 
+            let forecast = data.daily.summary;
+            console.log(forecast);
+            comingForecast.textContent = forecast;
+
+
+
+          })
         });
     } else {
+      
       alert('There was an error');
     }
 
