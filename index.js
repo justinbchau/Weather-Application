@@ -23,10 +23,16 @@ window.addEventListener('load', () => {
           long = position.coords.longitude;
           lat = position.coords.latitude;
 
+
           //-- GEOLocation TimeZone API --//
           // const timeAPI = `http://api.geonames.org/timezoneJSON?formatted=true&lat=${lat}&lng=${long}&username=ayoisaiah`;
     
           // fetch(timeAPI)
+
+          // const api2 = `http://api.geonames.org/timezoneJSON?formatted=true&lat=${lat}&lng=${long}&username=ayoisaiah`;
+    
+          // fetch(api2)
+
           // .then(response => {
           //   return response.json();
           // })
@@ -36,6 +42,7 @@ window.addEventListener('load', () => {
             
           //   currentTime.textContent = time;
           // })
+
 
           //-- Google Reverse GeoLocation API --//
           const map = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${google}`;
@@ -51,6 +58,7 @@ window.addEventListener('load', () => {
 
             city.textContent = address;
           })
+
 
           //-- DarkSky API --//
           const api = `${proxy}https://api.darksky.net/forecast/${key}/${lat},${long}` + `?format=jsonp`;
