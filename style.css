@@ -23,7 +23,7 @@ html {
     }
     }
 body {
-    min-height: calc(100vh - 2 * 2vw);
+    min-height: calc(120vh - 2 * 2vw);
 }
 
 .header {
@@ -70,4 +70,8 @@ body {
   /* Darker background on mouse-over */
   .btn:hover {
     background-color: RoyalBlue;
+  }
+
+  .coming__forecast {
+      font-size: 30px;;
   }
