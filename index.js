@@ -110,6 +110,7 @@ window.addEventListener('load', () => {
       alert('There was an error');
     }
 
+    // Function to set the correct skycons
     function setIcons(icon, iconID) {
       const skycons = new Skycons({"color": "black"});
       const currentIcon = icon.replace(/-/g, "_").toUpperCase();

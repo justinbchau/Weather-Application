@@ -75,3 +75,7 @@ body {
   .coming__forecast {
       font-size: 30px;;
   }
+
+  .dark__sky {
+     padding-top: 150px;
+  }
