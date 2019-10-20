@@ -16,33 +16,13 @@ window.addEventListener('load', () => {
     let comingForecast = document.querySelector('.coming__forecast');
     let city = document.querySelector('.current__city');
 
+
   
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
           long = position.coords.longitude;
           lat = position.coords.latitude;
-
-
-          //-- GEOLocation TimeZone API --//
-          // const timeAPI = `http://api.geonames.org/timezoneJSON?formatted=true&lat=${lat}&lng=${long}&username=ayoisaiah`;
-    
-          // fetch(timeAPI)
-
-          // const api2 = `http://api.geonames.org/timezoneJSON?formatted=true&lat=${lat}&lng=${long}&username=ayoisaiah`;
-    
-          // fetch(api2)
-
-          // .then(response => {
-          //   return response.json();
-          // })
-          // .then(data => {
-          //   console.log(data);
-          //   let time = data.time;
-            
-          //   currentTime.textContent = time;
-          // })
-
 
           //-- Google Reverse GeoLocation API --//
           const map = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${google}`;
@@ -75,12 +55,15 @@ window.addEventListener('load', () => {
             let weather = data.currently.temperature;
             let sum = data.currently.summary;
             let icon = data.currently.icon;
+            const now = new Date();
             //Setting DOM elements to the Data
 
             //currentTimeZone.textContent = timeZone.replace(/_/g, " ");
             currentWeather.textContent = weather;
             weatherDes.textContent = sum;
-            
+
+            new Intl.DateTimeFormat('en-US', { dateStyle: 'short' }).format(now);
+            currentTime.textContent = now;
 
             //Conversion Formula
             let celcius =  (currentWeather.textContent - 32) * (5 / 9);
